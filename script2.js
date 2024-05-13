@@ -141,6 +141,22 @@ function toggleDropdown() {
     }
 }
 
+fetch('https://fakestoreapi.com/products',{
+            method:"POST",
+            body:JSON.stringify(
+                {
+                    title: 'AMD Ryzen 5 5600',
+                    price: 120,
+                    description: 'lorem ipsum set',
+                    image: 'https://i.pravatar.cc',
+                    category: 'electronic'
+                }
+            )
+        })
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+
+
 const { createApp } = Vue
 createApp({
   data() {

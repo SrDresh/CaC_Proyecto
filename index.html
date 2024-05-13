@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-        <main>
-        <div v-else id="app">
+    <main>
+       <div id="app">
          <div class="capsule-container">
-          <div v-for="apple in datos" class="capsule">
-            <img :src="apple.image" :alt="apple.image">
-            <h4>{{apple.title}}</h4>
-            <h5>${{apple.price}}</h5>
+          <div v-for="venta in datos" class="capsule">
+            <img :src="venta.image" :alt="venta.image">
+            <h4>{{venta.title}}</h4>
+            <h5>{{venta.price}}</h5>
             <button>Comprar</button>
-          </div>
-        </div>
-      </div>
-    </main>
+         </div>
+       </div>
+     </div>
+  </main>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
     <script src="script2.js"></script>
   </body>
