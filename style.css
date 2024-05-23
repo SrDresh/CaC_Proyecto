@@ -20,7 +20,7 @@ body{
 .bi-apple{
     width: 30px;
     height: 35px;
-    color:whitesmoke;
+    fill:whitesmoke;
     align-items: center;
 }
 .search-header {
@@ -38,8 +38,8 @@ body{
     color: #9c9c9c;
     padding: 0.7rem 1rem;
     border-radius: 25px;
-    width: 240px;
-    height: 50px;
+    width: 220px;
+    height: 45px;
     transition: all ease-in-out 0.5s;
     margin-right: -2rem;
     opacity: 1;
@@ -79,7 +79,8 @@ body{
   .search-header__icon {
     height: 1.2em;
     width: 1.4em;
-    fill: #3a3a3a;
+    fill: rgb(168, 166, 166);
+    
   }
 /*---------------Boton para menu desplegable ------------*/
 .dropbtn {
@@ -171,28 +172,34 @@ body{
 /*-----------Contenedores para los productos-----------*/
 
 .capsule-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .capsule {
-    width: 300px;
-    margin: 20px;
+    width: auto;
+    margin: auto;
     padding: 20px;
-    background-color: #dbdada;
+    background-color: #b3b0b0;
     border-radius: 10px;
     text-align: center;
-}
+    box-sizing: border-box;
+    justify-content: space-around;
+    
+} 
 
 .capsule img {
+    image-resolution:initial;
     max-width: 100%;
-    border-radius: 5px;
+    height:350px;
     padding-bottom: 20px;
+    object-fit: contain;
 }
 
 .capsule h3 {
     margin-top: 10px;
+
 }
 
 .capsule p {
@@ -225,7 +232,7 @@ footer {
     max-width:auto;
     margin: 0 ;
     padding: 0 10px;
-    justify-content: space-evenly;
+    justify-content:space-between;
 }
 .footer-section h3{
     margin-left: 50px;
@@ -234,6 +241,7 @@ footer {
 .footer-section{
     list-style-type: none;
     padding: 0;
+    margin: 15px
 }
 .footer-lista li {
     display: flex;
@@ -369,4 +377,63 @@ ul {
   }
 .copy p{
 text-align: center;
+}
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: block;
+      align-items:center;
+      padding: 10px;
+  }
+
+  .search-header {
+      width: 50%;
+      justify-content: flex-start;
+      margin-top: 10px;
+  }
+
+  .search-header__input {
+      width: 100%;
+      margin-right: 0;
+  }
+
+  .dropbtn {
+      padding: 10px;
+  }
+
+  .capsule-container {
+    display: grid;
+      grid-template-columns: 5fr;
+      gap: 10px;
+  }
+
+  .capsule {
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      padding: 0px;
+  }
+ 
+  .footer-container {
+      flex-direction:row;
+      align-items:flex-start;
+      padding: 1px;
+  }
+
+  .footer-section {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+      margin-left: 0;
+  }
+
+  .footer-links li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .example-2 {
+      align-items: center;
+  }
 }
