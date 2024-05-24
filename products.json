@@ -8,7 +8,8 @@
         "rating": 4.69,
         "stock": 94,
         "brand": "Apple",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iphone_9.webp"
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
         "rating": 4.44,
         "stock": 34,
         "brand": "Apple",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iphone_x.webp"
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
         "rating": 4.09,
         "stock": 36,
         "brand": "Samsung",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/SN9.webp"
     },
     {
         "id": 5,
@@ -41,7 +44,8 @@
         "rating": 4.09,
         "stock": 32,
         "brand": "Huawei",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iphone_x.webp"
     },
     {
         "id": 6,
