@@ -14,7 +14,7 @@
           <div v-for="venta in datos" class="capsule">
             <img :src="venta.image" :alt="venta.image">
             <h4>{{venta.title}}</h4>
-            <h5>{{venta.price}}</h5>
+            <h5>${{venta.price}}</h5>
             <button>Comprar</button>
          </div>
        </div>
