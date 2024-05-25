@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'); 
+
 * {
     margin: 0;
     font-family: "Montserrat",sans-serif;
@@ -7,15 +9,19 @@
 body{
     margin: 0;
 }
+
 /* ------------Barra header-------------*/
 .navbar {
-    display: flex;
+    display:flex;
     background-color: #333;
     padding: 10px 15px;
+    align-items: center;
+    justify-content: space-between;
 }
 .logo{
     margin-left:15px;
 }
+
 
 .bi-apple{
     width: 30px;
@@ -82,17 +88,28 @@ body{
     fill: rgb(168, 166, 166);
     
   }
+  
 /*---------------Boton para menu desplegable ------------*/
+.right-menu {
+  display: flex;
+  align-items: center; /* Para alinear verticalmente */
+  justify-content: flex-end; /* Para alinear a la derecha */
+}
+.carrito{
+  display: flex;
+    align-items: center; /* Para alinear verticalmente */
+    margin-right: 10px;
+}
 .dropbtn {
     background-color: #333;
     padding: 15px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
 }
 .bi-list{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     color: whitesmoke;
 }
 .dropdown {
@@ -109,10 +126,11 @@ body{
 .input {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
     background-color: #333;
     justify-content: center;
-    border-radius: 5px
+    border-radius: 15px solid;
+    text-align: center;
   }
   
   .value {
@@ -168,16 +186,36 @@ body{
 
 .dropdown:hover .dropdown-content {display: block;}
 
+/* Codigo contenedor carrousel */
 
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: auto;
+  width: auto;
+  overflow:visible;
+}
+
+.image-container {
+  display:flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.portada{
+  width: 1903px;
+  height:800px;
+}
 /*-----------Contenedores para los productos-----------*/
 
 .capsule-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    padding: 25px;
 }
 
 .capsule {
+  display: inline-block;
     width: auto;
     margin: auto;
     padding: 20px;
@@ -190,11 +228,11 @@ body{
 } 
 
 .capsule img {
-    image-resolution:initial;
     max-width: 100%;
     height:350px;
     padding-bottom: 20px;
     object-fit: contain;
+    padding: 10px;
 }
 
 .capsule h3 {
@@ -378,7 +416,8 @@ ul {
 .copy p{
 text-align: center;
 }
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
   .navbar {
       flex-direction: block;
       align-items:center;
