@@ -1,31 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
     var headerContent = (`
     <header>
-    <nav class="navbar">
+    <nav>
+    <div class="navbar">
       <div class="logo">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-apple" viewBox="0 0 16 16">
       <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
       <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
     </svg>
       </div>
-      <div class="search-header">
-  <input placeholder="Search" class="search-header__input" type="text" />
+      <div id="app">
+      <div class="search-header" v-model="searchQuery">
+        <input placeholder="Search" class="search-header__input" type="text"/>
   <button class="search-header__button">
-    <svg
-      fill="none"
-      viewBox="2 0 18 19"
-      height="19"
-      width="19"
-      class="search-header__icon"
-    >
-      <path
-        fill="#3A3A3A"
+  <ul>
+      <li v-for="product in filteredProducts" :key="product.id">
+    <svg fill="none"  viewBox="2 0 18 19"  height="20" width="20"  class="search-header__icon">
+      <path   fill="#3A3A3A"
         d="M7.132 0C3.197 0 0 3.124 0 6.97c0 3.844 3.197 6.969 7.132 6.969 1.557 0 2.995-.49 4.169-1.32L16.82 18 18 16.847l-5.454-5.342a6.846 6.846 0 0 0 1.718-4.536C14.264 3.124 11.067 0 7.132 0zm0 .82c3.48 0 6.293 2.748 6.293 6.15 0 3.4-2.813 6.149-6.293 6.149S.839 10.37.839 6.969C.839 3.568 3.651.82 7.132.82z"
       ></path>
     </svg>
   </button>
 </div>
-      <div class="dropdown">
+</div>
+<div class="right-menu">
+<svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="32px" fill="#D9D9D9" class="carrito"><path d="M286.79-78.37Q257-78.37 236-99.58t-21-51q0-29.79 21.21-50.79t51-21q29.79 0 50.79 21.21 21 21.22 21 51 0 29.79-21.21 50.79t-51 21Zm400 0Q657-78.37 636-99.58t-21-51q0-29.79 21.21-50.79t51-21q29.79 0 50.79 21.21 21 21.22 21 51 0 29.79-21.21 50.79t-51 21Zm-447.25-660L345.48-518.5h287.28l120.22-219.87H239.54Zm-32.87-65.26h582.14q26.13 0 39.76 23.63 13.63 23.63.19 47.5L697.83-496.43q-11.48 19.47-29.51 31.45Q650.3-453 628.4-453H327.11l-54.33 101.37h488.85v65.26H277q-43.91 0-63.13-29.43-19.22-29.44.74-65.63L277.89-498 127.33-817.37H48.37v-65.26h121.3l37 79ZM345.48-518.5h287.28-287.28Z"/></svg>
+
+<div class="dropdown">
         <button onclick="toggleDropdown()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-list" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
       </svg></button>
@@ -48,7 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
             Accessibility
           </button>
           </div>
+        </div>
     </div>
+  </div>
     </nav>
     </header>`)
 
@@ -140,30 +143,29 @@ function toggleDropdown() {
         dropdown.style.display = "block";
     }
 }
-
-fetch('https://fakestoreapi.com/products',{
-            method:"POST",
-            body:JSON.stringify(
-                {
-                    title: 'AMD Ryzen 5 5600',
-                    price: 120,
-                    description: 'lorem ipsum set',
-                    image: 'https://i.pravatar.cc',
-                    category: 'electronic'
-                }
-            )
-        })
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-
-
 const { createApp } = Vue
 createApp({
   data() {
     return {
-      url: "https://fakestoreapi.com/products/category/electronics",
+      url: "products.json",
       datos: [],
+      searchQuery:"",
+      selectedCategory:"",
       error: false,
+    };
+  },
+  computed: {
+    uniqueCategories() {
+      const categories = this.datos.map(product => product.category);
+      return [...new Set(categories)];
+    },
+    filteredProducts() {
+      return this.datos.filter(product => {
+        const matchesQuery = product.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                             product.description.toLowerCase().includes(this.searchQuery.toLowerCase());
+        const matchesCategory = this.selectedCategory === "" || product.category === this.selectedCategory;
+        return matchesQuery && matchesCategory;
+      });
     }
   },
   methods: {
@@ -181,10 +183,49 @@ createApp({
           this.error = true
         });
     }
-  },   
+  },
 created() {  // created() se ejecuta cada vez que se crea el objeto VUE
   this.fetchData(this.url)
 }
 }).mount('#app')
 
 
+// Codigo del carrousel 
+const imgs = document.getElementById('imgs')
+const img = document.querySelectorAll('#imgs img')
+
+let idx = 0
+
+let interval = setInterval(run, 2000)
+
+function run() {
+    idx++
+    changeImage()
+}
+
+function changeImage() {
+    if(idx > img.length - 1) {
+        idx = 0
+    } else if(idx < 0) {
+        idx = img.length - 1
+    }
+
+    imgs.style.transform = `translateX(${-idx * 500}px)`
+}
+
+function resetInterval() {
+    clearInterval(interval)
+    interval = setInterval(run, 2000)
+}
+
+rightBtn.addEventListener('click', () => {
+    idx++
+    changeImage()
+    resetInterval()
+})
+
+leftBtn.addEventListener('click', () => {
+    idx--
+    changeImage()
+    resetInterval()
+})
