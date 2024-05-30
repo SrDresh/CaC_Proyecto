@@ -8,8 +8,7 @@
         "rating": 4.69,
         "stock": 94,
         "brand": "Apple",
-        "category": "smartphones",
-        "image":"Imgs/Iphone_9.webp"
+        "category": "smartphones"
     },
     {
         "id": 2,
@@ -20,20 +19,18 @@
         "rating": 4.44,
         "stock": 34,
         "brand": "Apple",
-        "category": "smartphones",
-        "image":"Imgs/Iphone_X.webp"
+        "category": "smartphones"
     },
     {
         "id": 3,
-        "title": "Samsung Note 9",
+        "title": "Samsung Universe 9",
         "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
         "price": 1249,
         "discountPercentage": 15.46,
         "rating": 4.09,
         "stock": 36,
         "brand": "Samsung",
-        "category": "smartphones",
-        "image":"Imgs/SN9.webp"
+        "category": "smartphones"
     },
     {
         "id": 5,

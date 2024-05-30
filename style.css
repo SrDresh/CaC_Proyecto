@@ -1,21 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'); 
+
 * {
     margin: 0;
-    font-family: "Montserrat",sans-serif;
+    /*font-family: "Montserrat",sans-serif;*/
+    padding: 0;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    margin: 0;
+    /*margin: 0; (ya esta en *) */
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    background-color: #fafafa;
+    color: #000000;
+    
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* ------------Barra header-------------*/
 .navbar {
-    display: flex;
+    /*display:flex;*/
     background-color: #333;
     padding: 10px 15px;
+    align-items: center;
+    /*justify-content: space-between;*/
+    /* Mica */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .logo{
     margin-left:15px;
 }
+
 
 .bi-apple{
     width: 30px;
@@ -82,17 +109,28 @@ body{
     fill: rgb(168, 166, 166);
     
   }
+  
 /*---------------Boton para menu desplegable ------------*/
+.right-menu {
+  display: flex;
+  align-items: center; /* Para alinear verticalmente */
+  justify-content: flex-end; /* Para alinear a la derecha */
+}
+.carrito{
+  display: flex;
+    align-items: center; /* Para alinear verticalmente */
+    margin-right: 10px;
+}
 .dropbtn {
     background-color: #333;
     padding: 15px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
 }
 .bi-list{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     color: whitesmoke;
 }
 .dropdown {
@@ -109,10 +147,11 @@ body{
 .input {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
     background-color: #333;
     justify-content: center;
-    border-radius: 5px
+    border-radius: 15px solid;
+    text-align: center;
   }
   
   .value {
@@ -168,16 +207,44 @@ body{
 
 .dropdown:hover .dropdown-content {display: block;}
 
+/* Codigo contenedor carrousel */
 
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: auto;
+  width: auto;
+  overflow:visible;
+    /* Mica */
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+  display:flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+    /*Mica*/
+  width: 100%;
+}
+
+.portada{
+  /*width: 1903px;
+  height:800px;*/
+    /*Mica*/
+    width: 100%;
+    height: auto;
+}
 /*-----------Contenedores para los productos-----------*/
 
 .capsule-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    padding: 25px;
 }
 
 .capsule {
+  /*display: inline-block;
     width: auto;
     margin: auto;
     padding: 20px;
@@ -185,20 +252,47 @@ body{
     border-radius: 10px;
     text-align: center;
     box-sizing: border-box;
-    justify-content: space-around;
+    justify-content: space-around;*/
+
+    /* Mica*/
+    width: 190px;
+    height: 254px;
+    padding: .8em;
+    background: #f5f5f5;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    /* responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #b3b0b0;
+    border-radius: 10px;
+    text-align: center;
     
 } 
 
 .capsule img {
-    image-resolution:initial;
-    max-width: 100%;
+    /*max-width: 100%;
     height:350px;
     padding-bottom: 20px;
     object-fit: contain;
+    padding: 10px;*/
+
+    height: 40%; /* Duda */
+    width: 100%; /* Duda 2*/
+    border-radius: .5rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .capsule h3 {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
 
 }
 
@@ -215,7 +309,12 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.capsule:hover{
+    border-color: #007bff;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
 .capsule button:hover {
@@ -229,10 +328,14 @@ footer {
 }
 .footer-container{
     display: flex;
+    /*Mica*/
+    flex-wrap: wrap; /*ajuste adecuadamente en pantallas más pequeñas*/
+    /**/
     max-width:auto;
     margin: 0 ;
     padding: 0 10px;
     justify-content:space-between;
+    
 }
 .footer-section h3{
     margin-left: 50px;
@@ -240,8 +343,11 @@ footer {
 
 .footer-section{
     list-style-type: none;
-    padding: 0;
-    margin: 15px
+    /*padding: 0;*/
+    margin: 15px;
+    /*Mica*/
+    flex: 1 1 200px;
+    padding: 10px;
 }
 .footer-lista li {
     display: flex;
@@ -378,7 +484,202 @@ ul {
 .copy p{
 text-align: center;
 }
-@media (max-width: 768px) {
+
+/* PANTALLAS RESPONSIVE */
+/* estilos para pantallas de 340px o menos */
+@media screen and (max-width: 340px){
+  .navbar{
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .logo{
+    margin: 0 auto 10px auto;
+  }
+
+  .search-header{
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .search-header__input{
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .capsule-container{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .capsule{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer{
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* estilos para pantallas de 576px o más */
+@media screen and (min-width: 576px){
+  .navbar{
+    padding: 10px 20px;
+  }
+
+  .logo{
+    margin-left: 15px;
+  }
+
+  .search-header{
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  .search-header__input{
+    width: 220px;
+  }
+
+  .capsule-container{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .capsule{
+    width: 90%;
+    padding: 15px;
+  }
+
+  .footer{
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* estilos para pantallas de 767px o más */
+@media screen and (min-width: 767px){
+  .navbar{
+    padding: 15px 25px;
+  }
+
+  .capsule-container{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .capsule{
+    width: 85%;
+    padding: 20px;
+  }
+
+  .footer{
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+
+/* estilos para pantallas de 1023px o más */
+@media screen and (min-width: 1023px){
+  .navbar{
+    padding: 20px 30px;
+  }
+  
+  .capsule-container{
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+  }
+
+  .capsule{
+    width: 80%;
+    padding: 25px;
+  }
+
+  .footer{
+    padding: 25px;
+    font-size: 18px;
+  }
+}
+
+/* estilos para pantallas de 1048px o más */
+@media screen and (min-width: 1048px){
+  .navbar{
+    padding: 25px 35px;
+  }
+
+  .capsule-container{
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+  }
+
+  .capsule{
+    width: 75%;
+    padding: 30px;
+  }
+
+  .footer{
+    padding: 30px;
+    font-size: 20px;
+  }
+}
+
+/* estilos para pantallas de 1200px o más */
+@media screen and (min-width: 1200px){
+  .navbar{
+    padding: 30px 40px;
+  }
+
+  .capsule-container{
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 35px;
+  }
+
+  .capsule{
+    width: 70%;
+    padding: 35px;
+  }
+
+  .footer{
+    padding: 35px;
+    font-size: 22px;
+  }
+}
+
+/*@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-header {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .search-header__input {
+    width: 80%;
+    margin-right: 0;
+  }
+
+.footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+    
+}*/
+
+
+
+/* COMENTADO POR LAS DUDAS */
+/*@media only screen and (max-width: 768px) {
   .navbar {
       flex-direction: block;
       align-items:center;
@@ -436,4 +737,4 @@ text-align: center;
   .example-2 {
       align-items: center;
   }
-}
+}*/
