@@ -8,7 +8,8 @@
         "rating": 4.69,
         "stock": 94,
         "brand": "Apple",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iPhone 9.webp"
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
         "rating": 4.44,
         "stock": 34,
         "brand": "Apple",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iPhone X.webp"
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
         "rating": 4.09,
         "stock": 36,
         "brand": "Samsung",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/Samsung Universe 9.webp"
     },
     {
         "id": 5,
@@ -41,32 +44,60 @@
         "rating": 4.09,
         "stock": 32,
         "brand": "Huawei",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/Huawei P30.webp"
+        
     },
     {
         "id": 6,
-        "title": "MacBook M1 Pro",
-        "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+        "title": "MacBook M3",
+        "description": "MacBook 2021 with mini-LED display may launch between September, November",
         "price": 1749,
         "discountPercentage": 11.02,
         "rating": 4.57,
         "stock": 83,
         "brand": "Apple",
-        "category": "laptops"
+        "category": "laptops",
+        "image":"Imgs/MacBook M3.webp"
     },
     {
         "id": 7,
-        "title": "MacBook M2 Pro",
+        "title": "MacBook M3 Pro",
         "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
         "price": 1749,
         "discountPercentage": 11.02,
         "rating": 4.57,
         "stock": 83,
         "brand": "Apple",
-        "category": "laptops"
+        "category": "laptops",
+        "image":"Imgs/MacBook M3.webp"
     },
     {
         "id": 8,
+        "title": "MacBook M3 MAX",
+        "description": "MacBook Max 2021 with mini-LED display may launch between September, November",
+        "price": 1749,
+        "discountPercentage": 11.02,
+        "rating": 4.57,
+        "stock": 83,
+        "brand": "Apple",
+        "category": "laptops",
+        "image":"Imgs/MacBook M3.webp"
+    },
+    {
+        "id": 9,
+        "title": "MacBook M2",
+        "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+        "price": 1349,
+        "discountPercentage": 11.02,
+        "rating": 4.57,
+        "stock": 83,
+        "brand": "Apple",
+        "category": "laptops",
+        "image":"Imgs/MacBook M2 Pro.webp"
+    },
+    {
+        "id": 10,
         "title": "MacBook M2 Pro",
         "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
         "price": 1749,
@@ -74,10 +105,11 @@
         "rating": 4.57,
         "stock": 83,
         "brand": "Apple",
-        "category": "laptops"
+        "category": "laptops",
+        "image":"Imgs/MacBook M2 Pro.webp"
     },
     {
-        "id": 9,
+        "id": 11,
         "title": "iPhone 15",
         "description": "The iPhone 15 has a 6.1 inch all screen Super Retina XDR display with the Dynamic Island. The back is color infused glass, and there is a contoured edge anodized aluminum band around the frame. The side button is on the right side of the device. There are two cameras on the back: Ultra Wide and Main. In the United States, there is no SIM tray. In other countries or regions, there is a SIM tray on the left side that holds a fourth form factor (4FF) nano SIM card.",
         "price": 664.97,
@@ -85,10 +117,11 @@
         "rating": 4.57,
         "stock": 100,
         "brand": "Apple",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iPhone 15.webp"
     },
     {
-        "id": 10,
+        "id": 12,
         "title": "iPhone 14 Pro Max",
         "description": "Apple iPhone 14 Pro Max, 256GB, Gold - Unlocked (Renewed Premium)",
         "price": 839.97,
@@ -96,10 +129,11 @@
         "rating": 4.2,
         "stock": 100,
         "brand": "Apple",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iPhone 14 Pro.webp"
     },
     {
-        "id": 11,
+        "id": 13,
         "title": "iPhone 13 Pro Max",
         "description": "Apple iPhone 14 Pro Max, 256GB, Gold - Unlocked (Renewed Premium)",
         "price": 528.71,
@@ -107,43 +141,47 @@
         "rating": 4.1,
         "stock": 100,
         "brand": "Apple",
-        "category": "smartphones"
-    },
-    {
-        "id": 12,
-        "title": "Samsung Galaxy S24 Ultra",
-        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-        "price": 1.219,
-        "discountPercentage": 15.46,
-        "rating": 4.4,
-        "stock": 36,
-        "brand": "Samsung",
-        "category": "smartphones"
-    },
-    {
-        "id": 13,
-        "title": "Samsung Galaxy S24 Ultra",
-        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-        "price": 1.219,
-        "discountPercentage": 15.46,
-        "rating": 4.4,
-        "stock": 36,
-        "brand": "Samsung",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/iPhone 13.webp"
     },
     {
         "id": 14,
-        "title": "HUAWEI P60 Pro",
+        "title": "Samsung Galaxy S24 Ultra",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1.219,
+        "discountPercentage": 15.46,
+        "rating": 4.4,
+        "stock": 36,
+        "brand": "Samsung",
+        "category": "smartphones",
+        "image":"Imgs/Samsung Galaxy S24 Ultra.webp"
+    },
+    {
+        "id": 15,
+        "title": "Samsung Galaxy S24",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1.019,
+        "discountPercentage": 15.46,
+        "rating": 4.4,
+        "stock": 36,
+        "brand": "Samsung",
+        "category": "smartphones",
+        "image":"Imgs/Samsung Galaxy S24 Ultra.webp"
+    },
+    {
+        "id": 16,
+        "title": "Huawei P60 Pro",
         "description": "Huawei P60 Pro Global Model MNA-LX9",
         "price": 1.190,
         "discountPercentage": 15.46,
         "rating": 3.6,
         "stock": 36,
         "brand": "Huawei",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/HUAWEI P60 Pro.webp"
     },
     {
-        "id": 15,
+        "id": 17,
         "title": "Samsung Galaxy S23",
         "description": "Huawei P60 Pro Global Model MNA-LX9",
         "price": 1.190,
@@ -151,10 +189,11 @@
         "rating": 3.6,
         "stock": 36,
         "brand": "Huawei",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/Samsung Galaxy S23.webp"
     },
     {
-        "id": 16,
+        "id": 18,
         "title": "Moto Edge 40 Pro",
         "description": "Huawei P60 Pro Global Model MNA-LX9",
         "price": 1.290,
@@ -162,10 +201,11 @@
         "rating": 4.7,
         "stock": 50,
         "brand": "Motorola",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/Motorola Edge 40 Pro.webp"
     },
     {
-        "id": 17,
+        "id": 19,
         "title": "Samsung Galaxy A54",
         "description": "Huawei P60 Pro Global Model MNA-LX9",
         "price": 960,
@@ -173,7 +213,8 @@
         "rating": 4.7,
         "stock": 7,
         "brand": "Samsung",
-        "category": "smartphones"
+        "category": "smartphones",
+        "image":"Imgs/Samsung Galaxy A54.webp"
     }
     
 ]
